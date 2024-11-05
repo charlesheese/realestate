@@ -2,10 +2,10 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/NavBar";
 import Home from "./pages/Home";
+import Contact from "./pages/Contact";
 
 const Listings = () => <div>Listings Page</div>;
 const About = () => <div>About Us Page</div>;
-const Contact = () => <div>Contact Page</div>;
 
 const App = () => {
   return (

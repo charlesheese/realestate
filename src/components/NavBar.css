@@ -1,30 +1,74 @@
+/* Navbar */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: #333;
-    color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0; /* Remove extra padding */
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 60px; /* Adjust height to match RSE example */
+}
+
+/* Left and right links aligned to the edges */
+.left-links {
+  position: absolute;
+  left: 2rem; /* Equal spacing from left edge */
+  display: flex;
+  gap: 2rem; /* Adjust gap for better spacing */
+  align-items: center;
+  height: 100%; /* Make links full height of navbar */
+}
+
+.right-links {
+  position: absolute;
+  right: 2rem; /* Equal spacing from right edge */
+  display: flex;
+  gap: 2rem; /* Adjust gap for better spacing */
+  align-items: center;
+  height: 100%; /* Make links full height of navbar */
+}
+
+/* Centered logo */
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  height: 100%; /* Make logo full height of navbar */
+}
+
+.navbar-logo a {
+  color: #333;
+  text-decoration: none;
+}
+
+/* Link styling */
+.navbar-links li {
+  list-style: none;
+}
+
+.navbar-links li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 1rem;
+  display: flex;
+  align-items: center; /* Center links vertically */
+  height: 100%; /* Ensure links take full height of navbar */
+}
+
+.navbar-links li a:hover {
+  color: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .left-links, .right-links {
+    gap: 1rem; /* Reduce gap on smaller screens */
   }
-  
-  .navbar-logo a {
-    color: #fff;
-    font-size: 1.5rem;
-    text-decoration: none;
-  }
-  
-  .navbar-links {
-    list-style-type: none;
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .navbar-links li a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .navbar-links li a:hover {
-    color: #ddd;
-  }
-  
+}
