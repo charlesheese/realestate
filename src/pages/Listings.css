@@ -63,30 +63,38 @@
     display: flex;
     align-items: center;
     overflow: hidden;
+    width: 100%;
 }
 
 .listings-grid {
     display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 100%; /* Adjusted for four listings per page */
+    transition: transform 0.7s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smooth animation */
+    width: 300%; /* Adjusted for three iterations of scrolling */
     margin: 0;
 }
 
+/* Listing box styling */
 .listing-box {
-    flex: 0 0 22%; /* Adjusted to fit four listings */
+    flex: 0 0 22%; /* Fits four listings per view */
     background-size: cover;
     background-position: center;
     height: 220px;
     border: 1px solid #ccc;
     border-radius: 8px;
     overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     cursor: pointer;
 }
 
 .listing-box:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 0; /* Removes rounded corners when zoomed */
+}
+
+.listing-box:hover img {
+    border-radius: 0; /* Ensures the image is square when zoomed */
 }
 
 /* Adjusted scroll buttons */
@@ -97,7 +105,7 @@
     color: white;
     border: none;
     width: 40px;
-    height: 100%; /* Full vertical height of the listing */
+    height: 100%; /* Full height for vertical alignment */
     font-size: 20px;
     cursor: pointer;
     display: flex;
@@ -107,12 +115,12 @@
 }
 
 .scroll-button.left {
-    left: -10px;
+    left: 0;
     border-radius: 8px 0 0 8px;
 }
 
 .scroll-button.right {
-    right: -10px;
+    right: 0;
     border-radius: 0 8px 8px 0;
 }
 
@@ -120,21 +128,26 @@
     background-color: #0055cc;
 }
 
-/* Adjusted listing details */
+/* Listing details */
 .listing-details {
     position: absolute;
     bottom: 0;
     width: 100%;
-    text-align: center;
-    padding: 8px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 12px;
     background-color: rgba(0, 0, 0, 0.6); /* Transparent black background */
     color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.listing-box:hover .listing-details {
+    opacity: 1; /* Ensures the text is fully visible on hover */
 }
 
 .listing-details p {
-    margin: 2px 0;
+    margin: 5px 0;
 }
 
 .listing-details p:first-child {
@@ -146,3 +159,61 @@
     font-size: 12px;
     margin-top: 2px;
 }
+.all-listings-title {
+    text-align: left;
+    color: #003366;
+    font-family: 'Roboto Slab', serif;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
+  
+  .all-listings-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four listings per row */
+    gap: 20px;
+  }
+  
+  .all-listings-box {
+    background-size: cover;
+    background-position: center;
+    height: 220px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .all-listings-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .all-listings-details {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Transparent black background */
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .all-listings-details p {
+    margin: 5px 0;
+  }
+  
+  .all-listings-details p:first-child {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 600;
+  }
+  
+  .all-listings-details p.address {
+    font-size: 12px;
+    margin-top: 2px;
+  }

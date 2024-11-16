@@ -6,7 +6,7 @@ const Listings: React.FC = () => {
   const navigate = useNavigate();
   const [currentPage, setCurrentPage] = useState(0);
 
-  const listingsData = [
+  const newListingsData = [
     [
       {
         id: 1,
@@ -77,19 +77,28 @@ const Listings: React.FC = () => {
     ],
   ];
 
+  const allListingsData = Array.from({ length: 20 }, (_, index) => ({
+    id: index + 9,
+    image: `src/pages/house${(index % 8) + 1}.jpg`,
+    beds: (index % 5) + 1,
+    baths: (index % 3) + 1,
+    address: `Random Address ${index + 1}, City, State`,
+    price: `$${(index + 1) * 100000}`,
+  }));
+
   const handleListingClick = (id: number) => {
     navigate(`/listing/${id}`);
   };
 
   const scrollRight = () => {
     setCurrentPage((prevPage) =>
-      prevPage === listingsData.length - 1 ? 0 : prevPage + 1
+      prevPage === newListingsData.length - 1 ? 0 : prevPage + 1
     );
   };
 
   const scrollLeft = () => {
     setCurrentPage((prevPage) =>
-      prevPage === 0 ? listingsData.length - 1 : prevPage - 1
+      prevPage === 0 ? newListingsData.length - 1 : prevPage - 1
     );
   };
 
@@ -102,7 +111,7 @@ const Listings: React.FC = () => {
             &lt;
           </button>
           <div className="listings-grid">
-            {listingsData[currentPage].map((listing) => (
+            {newListingsData[currentPage].map((listing) => (
               <div
                 key={listing.id}
                 className="listing-box"
@@ -124,6 +133,8 @@ const Listings: React.FC = () => {
           </button>
         </div>
       </div>
+
+      {/* Search Bar and Filtering Section */}
       <div className="filter-bar">
         <div className="search-bar">
           <input
@@ -170,6 +181,28 @@ const Listings: React.FC = () => {
               <option value="500k+">Above $500k</option>
             </select>
           </div>
+        </div>
+      </div>
+
+      <div className="listings-content">
+        <h2 className="all-listings-title">All Listings</h2>
+        <div className="all-listings-grid">
+          {allListingsData.map((listing) => (
+            <div
+              key={listing.id}
+              className="listing-box"
+              style={{ backgroundImage: `url(${listing.image})` }}
+              onClick={() => handleListingClick(listing.id)}
+            >
+              <div className="listing-details">
+                <p>
+                  <strong>{listing.price}</strong> |{" "}
+                  {`${listing.beds} Beds / ${listing.baths} Baths`}
+                </p>
+                <p className="address">{listing.address}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
