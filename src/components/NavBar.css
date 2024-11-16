@@ -1,54 +1,40 @@
 /* Navbar */
 .navbar {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0; /* Remove extra padding */
+  justify-content: space-between; /* Align left and right sections */
+  align-items: center; /* Center all items vertically */
+  padding: 0 20px; /* Add horizontal padding */
   background-color: #fff;
   border-bottom: 1px solid #ccc;
   position: sticky;
   top: 0;
   z-index: 10;
   width: 100%;
-  height: 60px; /* Adjust height to match RSE example */
-}
-
-/* Left and right links aligned to the edges */
-.left-links {
-  position: absolute;
-  left: 2rem; /* Equal spacing from left edge */
-  display: flex;
-  gap: 2rem; /* Adjust gap for better spacing */
-  align-items: center;
-  height: 100%; /* Make links full height of navbar */
-}
-
-.right-links {
-  position: absolute;
-  right: 2rem; /* Equal spacing from right edge */
-  display: flex;
-  gap: 2rem; /* Adjust gap for better spacing */
-  align-items: center;
-  height: 100%; /* Make links full height of navbar */
+  height: 60px; /* Fixed height for consistent alignment */
 }
 
 /* Centered logo */
 .navbar-logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #333;
-  text-align: center;
   display: flex;
+  justify-content: center;
   align-items: center;
-  height: 100%; /* Make logo full height of navbar */
+  height: 100%; /* Matches the navbar height */
 }
 
-.navbar-logo a {
-  color: #333;
-  text-decoration: none;
+.navbar-logo img {
+  height: 40px; /* Adjust size to fit within the navbar */
+  width: auto; /* Maintain aspect ratio */
 }
 
-/* Link styling */
+/* Left and right links */
+.left-links,
+.right-links {
+  display: flex;
+  align-items: center; /* Center links vertically */
+  gap: 20px; /* Spacing between links */
+  height: 100%; /* Ensure full navbar height for alignment */
+}
+
 .navbar-links li {
   list-style: none;
 }
@@ -57,9 +43,10 @@
   color: #333;
   text-decoration: none;
   font-size: 1rem;
+  font-family: "Bodoni MT", "Didot", "Didot LT STD", "Hoefler Text", Garamond, serif;
   display: flex;
-  align-items: center; /* Center links vertically */
-  height: 100%; /* Ensure links take full height of navbar */
+  align-items: center; /* Align link text vertically */
+  height: 100%; /* Ensure link text spans full navbar height */
 }
 
 .navbar-links li a:hover {
@@ -68,7 +55,13 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .left-links, .right-links {
-    gap: 1rem; /* Reduce gap on smaller screens */
+  .left-links,
+  .right-links {
+      gap: 10px; /* Reduce gap on smaller screens */
+  }
+
+  .navbar-logo img {
+      height: 30px; /* Resize logo for smaller screens */
   }
 }
+

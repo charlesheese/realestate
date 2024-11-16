@@ -5,6 +5,7 @@ import "./NavBar.css";
 const NavBar: React.FC = () => {
   return (
     <nav className="navbar">
+      {/* Left links */}
       <ul className="navbar-links left-links">
         <li>
           <Link to="/">Home</Link>
@@ -16,9 +17,19 @@ const NavBar: React.FC = () => {
           <Link to="/buy">Buy Properties</Link>
         </li>
       </ul>
+
+      {/* Centered logo */}
       <div className="navbar-logo">
-        <Link to="/">RM & GS</Link>
+        <Link to="/">
+          <img
+            src="https://mdbootstrap.com/img/Photos/new-templates/animal-shelter/logo.png"
+            alt="Logo"
+            loading="lazy"
+          />
+        </Link>
       </div>
+
+      {/* Right links */}
       <ul className="navbar-links right-links">
         <li>
           <Link to="/about">About Us</Link>
@@ -35,3 +46,4 @@ const NavBar: React.FC = () => {
 };
 
 export default NavBar;
+
