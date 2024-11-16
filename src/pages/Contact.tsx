@@ -14,7 +14,7 @@ const Contact: React.FC = () => {
   return (
     <div className="contact-container">
       <div className="contact-form">
-        <h1 className="form-title">SUBMIT A MESSAGE</h1>
+        <h1 className="form-title">Submit a Message</h1>
         <form>
           <label htmlFor="name">Name</label>
           <input type="text" id="name" name="name" required />
@@ -28,21 +28,12 @@ const Contact: React.FC = () => {
           <label htmlFor="message">Message</label>
           <textarea id="message" name="message" required></textarea>
 
-          <div className="consent">
-            <input type="checkbox" id="consent" name="consent" />
-            <label htmlFor="consent">
-              By providing RM & GS with your contact information, you
-              acknowledge and agree to our
-              <a href="/privacy-policy"> Privacy Policy </a>
-            </label>
-          </div>
-
           <button type="submit">Send Message</button>
         </form>
       </div>
 
       <div className="contact-info">
-        <h1 className="contact-title">DOUGLAS ELLIMAN</h1>
+        <h1 className="contact-title">Douglas Elliman</h1>
         <div className="contact-details">
           <div className="contact-item">
             <FaPhone className="contact-icon" />
@@ -50,19 +41,14 @@ const Contact: React.FC = () => {
           </div>
           <div className="contact-item">
             <FaEnvelope className="contact-icon" />
-            <a href="mailto:needyouremail">NEEDYOUREMAIL</a>
+            <a href="mailto:needyouremail">ryanmartinn@gmail.com</a>
           </div>
           <div className="contact-item">
             <FaMapMarkerAlt className="contact-icon" />
             <p>
-              NEED UR MAILING ADDRESS
+              716 Columbus
               <br />
-              NEED UR MAILING ADDRESS
-              <br />
-              <br />
-              NEED UR MAILING ADDRESS
-              <br />
-              NEED UR MAILING ADDRESS
+              Boston MA
             </p>
           </div>
         </div>
@@ -78,3 +64,7 @@ const Contact: React.FC = () => {
 };
 
 export default Contact;
+
+
+
+
