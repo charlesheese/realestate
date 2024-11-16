@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import "./AboutUs.css";
 import GerardSmith from "./image.png";
 import RyanMartin from "./RyanMartin.jpeg";
-import BackgroundImage from "./download.jpeg"; // Replace with your background image path
+import BackgroundImage from "./download.jpeg";
 
 const AboutUs: React.FC = () => {
   const aboutUsRef = useRef<HTMLDivElement>(null);

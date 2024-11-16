@@ -1,0 +1,148 @@
+/* General page styling */
+.listings-page {
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Filter bar styling */
+.filter-bar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Search bar styling */
+.search-bar {
+    flex: 1;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Filter options styling */
+.filter-options {
+    display: flex;
+    gap: 10px;
+}
+
+.filter-box {
+    position: relative;
+}
+
+.dropdown {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+/* Listings content */
+.listings-content {
+    margin-bottom: 20px;
+}
+
+.new-listings-title {
+    text-align: left;
+    color: #003366;
+    font-family: 'Roboto Slab', serif;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+/* Carousel container */
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.listings-grid {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%; /* Adjusted for four listings per page */
+    margin: 0;
+}
+
+.listing-box {
+    flex: 0 0 22%; /* Adjusted to fit four listings */
+    background-size: cover;
+    background-position: center;
+    height: 220px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.listing-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Adjusted scroll buttons */
+.scroll-button {
+    position: absolute;
+    top: 0;
+    background-color: #003366;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 100%; /* Full vertical height of the listing */
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.scroll-button.left {
+    left: -10px;
+    border-radius: 8px 0 0 8px;
+}
+
+.scroll-button.right {
+    right: -10px;
+    border-radius: 0 8px 8px 0;
+}
+
+.scroll-button:hover {
+    background-color: #0055cc;
+}
+
+/* Adjusted listing details */
+.listing-details {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    background-color: rgba(0, 0, 0, 0.6); /* Transparent black background */
+    color: #ffffff;
+}
+
+.listing-details p {
+    margin: 2px 0;
+}
+
+.listing-details p:first-child {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 600;
+}
+
+.listing-details p.address {
+    font-size: 12px;
+    margin-top: 2px;
+}
