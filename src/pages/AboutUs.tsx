@@ -1,7 +1,8 @@
 import React from "react";
 import "./AboutUs.css";
-import GerardSmith from "./image.png"; // Replace with the actual path to Gerard's photo
-import RyanMartin from "./RyanMartin.jpeg"; // Replace with the actual path to Ryan's photo
+import GerardSmith from "./image.png";
+import RyanMartin from "./RyanMartin.jpeg";
+import { FaPhone, FaEnvelope, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 const AboutUs: React.FC = () => {
   return (
@@ -24,7 +25,7 @@ const AboutUs: React.FC = () => {
           {/* Gerard's Photo */}
           <div className="about-us-member">
             <a
-              href="https://www.instagram.com/"
+              href="https://www.instagram.com/gerardsmith"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -41,12 +42,44 @@ const AboutUs: React.FC = () => {
               expectations, blending strategy and creativity to deliver
               exceptional results.
             </p>
+            <div className="contact-info">
+              <div className="social-icons">
+                <a
+                  href="https://www.instagram.com/gerardsmith"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="icon"
+                >
+                  <FaInstagram />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/gerardsmith"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="icon"
+                >
+                  <FaLinkedinIn />
+                </a>
+              </div>
+              <div className="contact-details">
+                <p onClick={() => (window.location.href = "tel:+15551234567")}>
+                  <FaPhone /> +1-555-123-4567
+                </p>
+                <p
+                  onClick={() =>
+                    (window.location.href = "mailto:gerard.smith@example.com")
+                  }
+                >
+                  <FaEnvelope /> gerard.smith@example.com
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Ryan's Photo */}
           <div className="about-us-member">
             <a
-              href="https://www.instagram.com/"
+              href="https://www.instagram.com/ryanmartin"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -63,6 +96,38 @@ const AboutUs: React.FC = () => {
               Ryan believes in fostering trust and collaboration to drive
               success and cultivate lasting partnerships.
             </p>
+            <div className="contact-info">
+              <div className="social-icons">
+                <a
+                  href="https://www.instagram.com/ryanmartin"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="icon"
+                >
+                  <FaInstagram />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/ryanmartin"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="icon"
+                >
+                  <FaLinkedinIn />
+                </a>
+              </div>
+              <div className="contact-details">
+                <p onClick={() => (window.location.href = "tel:+15559876543")}>
+                  <FaPhone /> +1-555-987-6543
+                </p>
+                <p
+                  onClick={() =>
+                    (window.location.href = "mailto:ryan.martin@example.com")
+                  }
+                >
+                  <FaEnvelope /> ryan.martin@example.com
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

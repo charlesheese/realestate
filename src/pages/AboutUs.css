@@ -3,51 +3,52 @@ body {
     scroll-behavior: smooth;
     margin: 0;
     background-color: #e6f7ff;
-}
-
-/* Meet the Team Section */
-.meet-the-team {
+  }
+  
+  /* Meet the Team Section */
+  .meet-the-team {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 80px 20px; /* Adjusted padding to push it down from navbar */
+    padding: 80px 20px;
     max-width: 1200px;
-    margin: 40px auto; /* Added margin for spacing from navbar */
-    gap: 20px; /* Reduced gap between title and description */
+    margin: 40px auto;
+    gap: 20px;
     height: auto;
     background-color: #fff;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     position: relative;
     overflow: hidden;
-    text-align: center; /* Center-align all content */
-}
-
-.meet-the-team-title {
+    text-align: center;
+    animation: fade-in 1.5s ease-in-out forwards;
+  }
+  
+  .meet-the-team-title {
     font-size: 4em;
     font-weight: bold;
-    color:  #1c3a6b;
-    font-family: "Bodoni MT", "Didot", "Didot LT STD", "Hoefler Text", Garamond, serif;
+    color: #1c3a6b;
+    font-family: "Bodoni MT", serif;
     text-align: center;
     z-index: 1;
-    animation: fadeIn 1s ease-in-out;
-}
-
-.meet-the-team-description {
+    animation: fade-in 1.8s ease-in-out forwards;
+  }
+  
+  .meet-the-team-description {
     font-size: 1.5em;
     color: #333;
     line-height: 1.8;
-    font-family: "Bodoni MT", "Didot", "Didot LT STD", "Hoefler Text", Garamond, serif;
+    font-family: "Bodoni MT", serif;
     text-align: center;
     max-width: 800px;
     z-index: 1;
-    animation: fadeIn 2s ease-in-out;
-}
-
-/* About Us Section */
-.about-us {
-    margin: 80px auto; /* Reduced margin to bring About Us closer to Meet the Team */
+    animation: fade-in 2s ease-in-out forwards;
+  }
+  
+  /* About Us Section */
+  .about-us {
+    margin: 80px auto;
     max-width: 1200px;
     text-align: center;
     background-color: #fff;
@@ -55,66 +56,41 @@ body {
     padding: 50px 20px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     position: relative;
-}
-
-.about-us::after {
-    content: "";
-    position: absolute;
-    bottom: -50px;
-    right: -50px;
-    width: 200px;
-    height: 200px;
-    background: linear-gradient(135deg, #74b9ff, #523ca8);
-    opacity: 0.2;
-    border-radius: 50%;
-    animation: float 6s infinite ease-in-out; /* Ensure animation is applied */
-    z-index: 0;
-}
-
-.meet-the-team::after {
-    content: "";
-    position: absolute;
-    top: -50px;
-    left: -50px;
-    width: 200px;
-    height: 200px;
-    background: linear-gradient(135deg, #523ca8, #74b9ff);
-    opacity: 0.2;
-    border-radius: 50%;
-    animation: float 6s infinite ease-in-out; /* Ensure animation is applied */
-    z-index: 0;
-}
-
-.about-us-title {
+    animation: fade-in 2s ease-in-out forwards;
+  }
+  
+  .about-us-title {
     font-size: 2.5em;
     font-weight: bold;
-    color:  #1c3a6b;
-    font-family: "Bodoni MT", "Didot", "Didot LT STD", "Hoefler Text", Garamond, serif;
+    color: #1c3a6b;
+    font-family: "Bodoni MT", serif;
     margin-bottom: 10px;
     z-index: 1;
     position: relative;
-}
-
-.underline {
+    animation: fade-in 2s ease-in-out forwards;
+  }
+  
+  .underline {
     width: 60rem;
     height: 2px;
-    background-color:  #e6f7ff;
+    background-color: #e6f7ff;
     margin: 10px auto;
     z-index: 1;
-}
-
-/* About Us Photos */
-/* About Us Photos */
-.about-us-photos {
+    animation: fade-in 2s ease-in-out forwards;
+  }
+  
+  /* About Us Photos */
+  .about-us-photos {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100%;
     margin-top: 40px;
     gap: 20px;
-}
-
-.about-us-member {
+    animation: fade-in 2s ease-in-out forwards;
+  }
+  
+  .about-us-member {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -126,56 +102,110 @@ body {
     border-radius: 15px;
     transition: transform 0.3s ease-in-out;
     background-color: #fff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
-    padding-top: 20px; /* Add margin above the image */
-}
-
-.about-us-member:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding-top: 20px;
+    animation: fade-in 2s ease-in-out forwards;
+  }
+  
+  .about-us-member:hover {
     transform: translateY(-10px) scale(1.05);
-}
-.about-us-member a {
-    text-decoration: none; /* Remove underline */
-    color: inherit; /* Keep original color */
-}
-
-
-/* Image Sizing */
-.headshot-default,
-.headshot-top-2-3 {
+  }
+  
+  .about-us-member a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Image Sizing */
+  .headshot-default,
+  .headshot-top-2-3 {
     width: 100%;
     height: auto;
-    max-height: 400px; /* Maintain earlier max height */
+    max-height: 400px;
     object-fit: cover;
     border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-}
-
-/* Gerard's Top 2/3 Image */
-.headshot-top-2-3 {
-    object-position: top; /* Show the top two-thirds of the image */
-}
-
-/* Member Description */
-.about-us-member-description {
+  }
+  
+  /* Gerard's Top 2/3 Image */
+  .headshot-top-2-3 {
+    object-position: top;
+  }
+  
+  /* Member Description */
+  .about-us-member-description {
     font-size: 1.1em;
     color: #333;
     line-height: 1.6;
     max-width: 90%;
-    font-family: "Bodoni MT", "Didot", "Didot LT STD", "Hoefler Text", Garamond, serif;
+    font-family: "Bodoni MT", serif;
     margin-top: 10px;
     z-index: 1;
     position: relative;
     padding: 10px 20px;
-}
-
-
-@keyframes float {
+  }
+  
+  /* Contact Info Section */
+  .contact-info {
+    margin-top: 10px; /* Reduced spacing from description */
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 5px; /* Reduced spacing */
+  }
+  
+  .icon {
+    font-size: 1.5em;
+    color: #1c3a6b;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .icon:hover {
+    color: #0056b3;
+  }
+  
+  .contact-details {
+    font-size: 1em;
+    color: #333;
+  }
+  
+  .contact-details p {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 5px 0;
+    transition: color 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .contact-details p:hover {
+    color: #0056b3;
+  }
+  
+  /* Floating Animation */
+  @keyframes float {
     0% {
-        transform: translateY(0) translateX(0);
+      transform: translateY(0) translateX(0);
     }
     50% {
-        transform: translateY(-30px) translateX(20px);
+      transform: translateY(-30px) translateX(20px);
     }
     100% {
-        transform: translateY(0) translateX(0);
+      transform: translateY(0) translateX(0);
     }
-}
+  }
+  
+  /* Fade-in Animation */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
