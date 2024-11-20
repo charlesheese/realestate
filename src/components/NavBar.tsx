@@ -12,21 +12,14 @@ const NavBar: React.FC = () => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/listings">Home Search</Link>
-          </li>
-          <li>
-            <Link to="/buy">Buy Properties</Link>
+            <Link to="/listings">Find A Home</Link>
           </li>
         </ul>
 
         {/* Centered logo */}
         <div className="navbar-logo">
           <Link to="/">
-            <img
-              src="https://mdbootstrap.com/img/Photos/new-templates/animal-shelter/logo.png"
-              alt="Logo"
-              loading="lazy"
-            />
+            <img src="src/components/logo.png" alt="Logo" loading="lazy" />
           </Link>
         </div>
 
@@ -34,9 +27,6 @@ const NavBar: React.FC = () => {
         <ul className="navbar-links right-links">
           <li>
             <Link to="/about">About Us</Link>
-          </li>
-          <li>
-            <Link to="/agents">Agents</Link>
           </li>
           <li>
             <Link to="/contact">Contact</Link>
@@ -48,4 +38,3 @@ const NavBar: React.FC = () => {
 };
 
 export default NavBar;
-
